@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="Festival Nauke target" sequenceNumber="19">
+<locations>
+<location path="${TARGET_ROOT}/Eclipse-3.7.2-dodatno" type="Directory"/>
+<location path="${TARGET_ROOT}/eclipse-delta-pack-linux-win" type="Directory"/>
+<location path="${TARGET_ROOT}/RCP-3.7.2" type="Directory"/>
+<location path="${TARGET_ROOT}/Zest2" type="Directory"/>
+<location path="${TARGET_ROOT}/draw2d-3.7.0" type="Directory"/>
+</locations>
+</target>

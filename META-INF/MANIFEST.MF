@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Napravi svoj sajt
+Bundle-SymbolicName: festivalnauke.rni.napravisvojsajt; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: festivalnauke.rni.napravisvojsajt.Activator
+Bundle-Vendor: Odsek za primenjene računarske nauke i informatiku
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms;bundle-version="3.5.100",
+ org.eclipse.zest.core;bundle-version="2.0.0",
+ org.eclipse.zest.jface;bundle-version="2.0.0",
+ org.eclipse.zest.layouts;bundle-version="2.0.0",
+ org.eclipse.draw2d;bundle-version="3.7.0",
+ de.timpietrusky.leetedit;bundle-version="0.0.1",
+ org.eclipse.core.databinding;bundle-version="1.4.0",
+ org.eclipse.jface.databinding;bundle-version="1.5.0",
+ org.eclipse.core.databinding.property;bundle-version="1.4.0",
+ org.eclipse.core.databinding.beans;bundle-version="1.2.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
