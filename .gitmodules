@@ -1,0 +1,4 @@
+[submodule "LeetEdit"]
+	path = LeetEdit
+	url = git://github.com/igordejanovic/make-your-site.git
+
