@@ -19,3 +19,4 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.databinding.beans;bundle-version="1.2.100"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
+Export-Package: festivalnauke.rni.napravisvojsajt.generator

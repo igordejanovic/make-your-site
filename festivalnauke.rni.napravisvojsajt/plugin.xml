@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="festivalnauke.rni.napravisvojsajt.generator" name="Site Generator" schema="schema/festivalnauke.rni.napravisvojsajt.generator.exsd"/>
 
    <extension
          id="application"
