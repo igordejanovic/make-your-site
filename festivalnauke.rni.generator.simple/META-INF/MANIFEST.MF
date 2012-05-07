@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Simple generator
+Bundle-SymbolicName: festivalnauke.rni.generator.simple;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: festivalnauke.rni.generator.simple.Activator
+Bundle-Vendor: RNI
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ festivalnauke.rni.napravisvojsajt;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
