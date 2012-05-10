@@ -48,11 +48,12 @@ This software uses following open-source libs/projects/tehnologies:
     * Zest
     * LeetEdit
     * TinyMCE (integrated by LeetEdit)
+    * Guava
+    * FreeMarker
 
 TODO
 ====
 
- * Site creation (HTML+CSS code generation).
  * Load/Save
  * English localization.
  * Javadocs.
