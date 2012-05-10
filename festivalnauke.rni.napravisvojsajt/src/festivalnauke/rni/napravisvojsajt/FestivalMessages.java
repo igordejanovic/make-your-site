@@ -7,8 +7,8 @@ public class FestivalMessages extends NLS {
 	static {
 		NLS.initializeMessages(BASE_NAME, FestivalMessages.class);
 	}
-	public static String Page_Default_Title;
-	public static String Page_Default_Content;
-	public static String Page_Default_Title_Root;
+	public static String Page_Default_Title = "Нова страна";
+	public static String Page_Default_Content = "Садржај стране";
+	public static String Page_Default_Title_Root = "Главна страна";
 
 }

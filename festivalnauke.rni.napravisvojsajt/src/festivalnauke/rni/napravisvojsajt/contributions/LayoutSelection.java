@@ -38,7 +38,7 @@ public class LayoutSelection extends ControlContribution {
 		ComboViewer algCombo = new ComboViewer(c, SWT.DROP_DOWN|SWT.READ_ONLY);
 		algCombo.setContentProvider(ArrayContentProvider.getInstance());
 		algCombo.setInput(SiteStructureView.Layout.values());
-		algCombo.setSelection(new StructuredSelection(SiteStructureView.Layout.RADIAL));
+		algCombo.setSelection(new StructuredSelection(SiteStructureView.Layout.TREE));
 		
 		algCombo.addSelectionChangedListener(new ISelectionChangedListener() {
 			

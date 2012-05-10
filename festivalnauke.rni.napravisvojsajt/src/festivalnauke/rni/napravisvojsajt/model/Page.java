@@ -49,5 +49,27 @@ public class Page extends SiteElement implements IDisposable {
 		this.content = content;
 	}
 
+	public boolean containsPicture(){
+		boolean hasPicture = false;
+		for(SiteElement s: siteElements){
+			if(s instanceof Picture){
+				hasPicture = true;
+				break;
+			}
+		}
+		return hasPicture;
+	}
+	
+	public Picture getPicture(){
+		Picture picture = null;
+		for(SiteElement s: siteElements){
+			if(s instanceof Picture){
+				picture = (Picture) s;
+				break;
+			}
+		}
+		return picture;
+	}
+
 
 }

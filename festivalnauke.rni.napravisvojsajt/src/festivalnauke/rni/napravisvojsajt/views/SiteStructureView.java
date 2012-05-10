@@ -61,7 +61,7 @@ public class SiteStructureView extends ViewPart
 		viewer = new GraphViewer(parent, SWT.NONE);
 		viewer.setContentProvider(new SiteStructureContentProvider());
 		viewer.setLabelProvider(new SiteStructureLabelProvider());
-		viewer.setLayoutAlgorithm(new RadialLayoutAlgorithm());
+		viewer.setLayoutAlgorithm(new TreeLayoutAlgorithm());
 		viewer.setInput(Site.getSite());
 		getSite().setSelectionProvider(viewer);
 		Site.getSite().addSiteChangeListener(this);

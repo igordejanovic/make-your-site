@@ -49,8 +49,8 @@
                id="festivalnauke.rni.napravisvojsajt.sitestructureview"
                minimized="false"
                moveable="true"
-               ratio="0.3"
-               relationship="left"
+               ratio="0.5"
+               relationship="top"
                relative="org.eclipse.ui.editorss"
                showTitle="false"
                standalone="true">
@@ -60,8 +60,8 @@
                id="festivalnauke.rni.napravisvojsajt.pageview"
                minimized="false"
                moveable="true"
-               ratio="0.7"
-               relationship="right"
+               ratio="0.5"
+               relationship="bottom"
                relative="festivalnauke.rni.napravisvojsajt.sitestructureview"
                standalone="true">
          </view>
@@ -89,6 +89,13 @@
             <command
                   commandId="festivalnauke.rni.napravisvojsajt.commands.delete"
                   icon="icons/cancel_32.png"
+                  mode="FORCE_TEXT"
+                  style="push">
+            </command>
+            <command
+                  commandId="festivalnauke.rni.napravisvojsajt.command1"
+                  icon="icons/Actions-go-next-view-icon.png"
+                  label="Креирај сајт!"
                   mode="FORCE_TEXT"
                   style="push">
             </command>
@@ -136,7 +143,7 @@
          </property>
          <property
                name="aboutText"
-               value="Програм за креирање једноставних сајтова на бази визуалног језика за спецификацију структуре сајта.&#x0A;Креирано за Фестивал науке.&#x0A;Мај, 2012.&#x0A;&#x0A;Аутор: др Игор Дејановић&#x0A;Одсек за примењене рачунарске науке и ифнорматику, Факултет техничких наука, Нови Сад">
+               value="Програм за креирање једноставних сајтова на бази визуалног језика за спецификацију структуре и садржаја сајта.&#x0A;Мај, 2012.&#x0A;&#x0A;Аутор: Игор Дејановић&#x0A;Splashscreen и шаблон за сајт: Милорад Филиповић&#x0A;Катедра за информатику, одсек за примењене рачунарске науке и ифнорматику, Факултет техничких наука, Нови Сад">
          </property>
          <property
                name="startupProgressRect"
@@ -185,6 +192,10 @@
             </iterate>
          </enabledWhen>
       </handler>
+      <handler
+            class="festivalnauke.rni.napravisvojsajt.handlers.CreateSite"
+            commandId="festivalnauke.rni.napravisvojsajt.handler1">
+      </handler>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
@@ -223,8 +234,15 @@
             name="Убаци слику">
       </command>
       <command
+            categoryId="festivalnauke.rni.napravisvojsajt.commands.category"
             id="festivalnauke.rni.napravisvojsajt.commands.delete"
             name="Брисање">
+      </command>
+      <command
+            categoryId="festivalnauke.rni.napravisvojsajt.commands.category"
+            defaultHandler="festivalnauke.rni.napravisvojsajt.handlers.CreateSite"
+            id="festivalnauke.rni.napravisvojsajt.command1"
+            name="Креирај сајт">
       </command>
    </extension>
 

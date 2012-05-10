@@ -47,7 +47,7 @@ public abstract class SiteElement implements IDisposable {
 			existingPicture.dispose();
 		}		
 	}
-
+	
 	public List<SiteElement> getSiteElements() {
 		return siteElements;
 	}

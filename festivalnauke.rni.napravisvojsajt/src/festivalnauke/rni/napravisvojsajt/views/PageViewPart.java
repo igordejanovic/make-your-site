@@ -10,8 +10,6 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ControlAdapter;
-import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -32,6 +30,8 @@ import de.timpietrusky.leetedit.LeetEdit;
 import festivalnauke.rni.napravisvojsajt.model.Page;
 
 public class PageViewPart extends ViewPart implements ISelectionListener, INullSelectionListener {
+	
+	public static final String ID = "festivalnauke.rni.napravisvojsajt.pageview";
 
 	private FormToolkit toolkit;
 	private ScrolledForm form;
@@ -72,13 +72,6 @@ public class PageViewPart extends ViewPart implements ISelectionListener, INullS
 		toolkit.adapt(composite);
 		toolkit.paintBordersFor(composite);
 		composite.setLayout(new GridLayout(1, false));
-		
-		composite.addControlListener(new ControlAdapter() {
-			public void controlResized(ControlEvent e) {
-				
-			}			
-		});
-		
 		
 		sctnNewSection = toolkit.createSection(composite, Section.TITLE_BAR);
 		sctnNewSection.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
@@ -136,11 +129,8 @@ public class PageViewPart extends ViewPart implements ISelectionListener, INullS
 		
 		// We have to synchronize node selection with the page properties
 		if(part instanceof SiteStructureView){
-			// LeetEdit does not support databinding
-			Page cPage = (Page) currentPage.getValue();
-			if(cPage != null){
-				cPage.setContent(this.txtNewText_1.getText());
-			}
+
+			syncPageContent();
 			
 			// Count selected Pages and get a reference to selected Page
 			IStructuredSelection s = (IStructuredSelection) selection;
@@ -163,5 +153,18 @@ public class PageViewPart extends ViewPart implements ISelectionListener, INullS
 				currentPage.setValue(null);
 			}
 		}
+	}
+
+	public Page getCurrentPage() {
+		return (Page) currentPage.getValue();
+	}
+
+	public void syncPageContent() {
+		// LeetEdit does not support databinding so we have to sync with model.
+		Page cPage = (Page) currentPage.getValue();
+		if(cPage != null){
+			cPage.setContent(this.txtNewText_1.getText());
+		}
+		
 	}
 }

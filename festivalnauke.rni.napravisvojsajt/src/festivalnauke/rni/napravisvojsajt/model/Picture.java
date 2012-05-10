@@ -1,5 +1,7 @@
 package festivalnauke.rni.napravisvojsajt.model;
 
+import java.io.File;
+
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.ui.services.IDisposable;
@@ -10,6 +12,7 @@ public class Picture extends SiteElement implements IDisposable {
 	
 	protected Image picture;
 	protected Image scaledPicture;
+	protected String picturePath;
 	protected PictureLocation location = PictureLocation.TOPLEFT;
 	
 	public enum PictureLocation {
@@ -19,10 +22,11 @@ public class Picture extends SiteElement implements IDisposable {
 		BOTTOMRIGHT
 	}
 
-	public Picture(SiteElement parent, Image picture) {
+	public Picture(SiteElement parent, Image picture, String path) {
 		super();
 		this.parent = parent;
 		this.picture = picture;
+		this.picturePath = path;
 		
 		ImageData imageData = picture.getImageData();
 		int width = imageData.width;
@@ -46,6 +50,14 @@ public class Picture extends SiteElement implements IDisposable {
 
 	public Image getScalledImage() {
 		return scaledPicture;
+	}
+
+	public String getPicturePath() {
+		return picturePath;
+	}
+	
+	public String getPictureName() {
+		return new File(picturePath).getName();
 	}
 	
 }

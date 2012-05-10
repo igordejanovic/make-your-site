@@ -49,7 +49,7 @@ public class CreatePictureHandler extends AbstractHandler {
 			while(i.hasNext()){
 				Object selectedObject = i.next();
 				if(selectedObject instanceof Page){
-					new Picture((SiteElement)selectedObject, image);
+					new Picture((SiteElement)selectedObject, image, fileName);
 					break;
 				}
 			}

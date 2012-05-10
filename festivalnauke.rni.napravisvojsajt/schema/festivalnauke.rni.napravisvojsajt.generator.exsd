@@ -61,7 +61,7 @@
                </documentation>
             </annotation>
          </attribute>
-         <attribute name="generator" type="string">
+         <attribute name="class" type="string">
             <annotation>
                <documentation>
                   
@@ -69,6 +69,13 @@
                <appinfo>
                   <meta.attribute kind="java" basedOn=":festivalnauke.rni.napravisvojsajt.generator.ISiteGenerator"/>
                </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
             </annotation>
          </attribute>
       </complexType>

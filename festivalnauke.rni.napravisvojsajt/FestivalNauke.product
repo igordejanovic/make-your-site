@@ -5,12 +5,12 @@
 
    <aboutInfo>
       <text>
-         Програм за креирање једноставних сајтова на бази визуалног језика за спецификацију структуре сајта.
-Креирано за Фестивал науке.
+         Програм за креирање једноставних сајтова на бази визуалног језика за спецификацију структуре и садржаја сајта.
 Мај, 2012.
 
-Аутор: др Игор Дејановић
-Одсек за примењене рачунарске науке и ифнорматику, Факултет техничких наука, Нови Сад
+Аутор: Игор Дејановић
+Splashscreen и шаблон за сајт: Милорад Филиповић
+Катедра за информатику, одсек за примењене рачунарске науке и ифнорматику, Факултет техничких наука, Нови Сад
       </text>
    </aboutInfo>
 
@@ -26,7 +26,7 @@
    <splash
       location="festivalnauke.rni.napravisvojsajt"
       startupProgressRect="5,275,445,15" />
-   <launcher name="Festival">
+   <launcher name="NapraviSvojSajt">
       <solaris/>
       <win useIco="false">
          <bmp/>
@@ -39,9 +39,12 @@
    </vm>
 
    <plugins>
+      <plugin id="com.google.guava"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="de.timpietrusky.leetedit"/>
+      <plugin id="festivalnauke.rni.generator.simple"/>
       <plugin id="festivalnauke.rni.napravisvojsajt"/>
+      <plugin id="net.sourceforge.freemarker"/>
       <plugin id="org.eclipse.core.commands"/>
       <plugin id="org.eclipse.core.contenttype"/>
       <plugin id="org.eclipse.core.databinding"/>
@@ -71,6 +74,7 @@
       <plugin id="org.eclipse.zest.core"/>
       <plugin id="org.eclipse.zest.jface"/>
       <plugin id="org.eclipse.zest.layouts"/>
+      <plugin id="org.slf4j"/>
    </plugins>
 
 
