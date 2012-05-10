@@ -31,7 +31,6 @@
         <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
         <div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>Везане странице</h3>
         <ul id="menu">
           <#list sidebarLinks as link>
           <li><a href="${link}.html">${link}</a></li>
