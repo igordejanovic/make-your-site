@@ -4,8 +4,10 @@
    <extension
          point="festivalnauke.rni.napravisvojsajt.generator">
       <generator
-            Name="festivalnauke.rni.generator.simple.generator1"
-            generator="festivalnauke.rni.generator.simple.SimpleSiteGenerator">
+            Name="Simple site generator"
+            class="festivalnauke.rni.generator.simple.SimpleSiteGenerator"
+            generator="festivalnauke.rni.generator.simple.SimpleSiteGenerator"
+            id="festivalnauke.rni.generator.simple.generator1">
       </generator>
    </extension>
 
